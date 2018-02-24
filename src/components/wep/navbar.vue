@@ -29,7 +29,7 @@
   </nav>
 </template>
 <style scoped>
-nav {font-size: 0px;border-bottom: 1px solid #e7e7e7;text-align: center;overflow: hidden;position:fixed;top:40px;width: 100%;background: #fff}
+nav {font-size: 0px;border-bottom: 1px solid #e7e7e7;text-align: center;overflow: hidden;width: 100%;background: #fff}
 nav a {color:#666666;padding: 5px 0;width: 100%;display: inline-block;}
 nav a.router-link-active {color: #a92433}
 nav a span.i {display: inline-block;width: 16px;height: 16px;}

@@ -2,7 +2,7 @@
   <article>
     <section class="tablelist center-box" id="ranklist">
       <section>
-        <v-table title="猿题库®2016中国高中排行榜（竞赛榜）" :columns="columns"
+        <v-table title="猿题库®2017中国高中排行榜（竞赛榜）" :columns="columns"
         :dataSource="competitionData">
       </v-table>
     </section>   

@@ -17,8 +17,8 @@
           <span v-if="attr.dataIndex === 'nationRank' && isNaN(item[attr.dataIndex])">{{ item[attr.dataIndex] }}</span>
           <span v-if="attr.dataIndex === 'change' && item[attr.dataIndex] > 0" class="up">{{ item[attr.dataIndex] }}</span>
           <span v-if="attr.dataIndex === 'change' && item[attr.dataIndex] < 0" class="down">{{ -item[attr.dataIndex] }}</span>
-          <span v-if="attr.dataIndex === 'change' && item[attr.dataIndex] == 0" class="right">0</span>
-          <span v-if="attr.dataIndex === 'change' && item[attr.dataIndex] == '-'">-</span>
+          <span v-if="attr.dataIndex === 'change' && item[attr.dataIndex] === '0'" class="right">0</span>
+          <span v-if="attr.dataIndex === 'change' && item[attr.dataIndex] === '-'">-</span>
         </td>                        
       </tr>
     </tbody>

@@ -3,7 +3,7 @@
     <section id="banner" class="text-center">
       <img src="../../images/web/ytk.png">
       <h1>中国高中排行榜</h1>
-      <p>猿题库2016中国高中排行榜，是猿题库评价研究中心针对全国普通高中做的一个公正、权威的排名。 </p>
+      <p>猿题库2017中国高中排行榜，是猿题库评价研究中心针对全国普通高中做的一个公正、权威的排名。 </p>
       <p>榜单以全国百强榜为主，另有分省十强榜、竞赛榜、状元榜等子榜。</p>
       <div class="btnGroup">
         <a @click="scrollto('ranklist')">查看榜单</a>
@@ -13,13 +13,13 @@
     <section class="tablelist center-box" id="ranklist">
       <section>
         <h1 class="n1">全国榜（100强）</h1>
-        <v-table title="猿题库®2016中国高中排行榜（100强）" :columns="columns_country"
+        <v-table title="猿题库®2017中国高中排行榜（100强）" :columns="columns_country"
         :dataSource="nationData"></v-table>
       </section>
       <section class="fc">
         <h1 class="n2">分省榜（10强）</h1>
         <section class="half" v-for="(value,key) in provinceData">
-          <v-table :title="'猿题库®2016中国高中排行榜（' + key + '10强）'" :columns="columns_province"
+          <v-table :title="'猿题库®2017中国高中排行榜（' + key + '10强）'" :columns="columns_province"
           :dataSource="value"></v-table>
         </section>
       </section> 
@@ -58,7 +58,7 @@ export default {
         dataIndex: 'province'
       },
       {
-        name: '2015年排名',
+        name: '2016年排名',
         dataIndex: 'lastRank'
       },
       {
@@ -78,11 +78,11 @@ export default {
         dataIndex: 'city'
       },
       {
-        name: '2015年省内排名',
+        name: '2016年省内排名',
         dataIndex: 'lastRank'
       },
       {
-        name: '2016年全国排名',
+        name: '2017年全国排名',
         dataIndex: 'nationRank'
       }],
       provinceData,

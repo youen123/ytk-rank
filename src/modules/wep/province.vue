@@ -7,11 +7,16 @@
           <li :class='{active: activeProvince == item}' v-for='item in provinceList' @click='changeProvince(item)'>{{item}}</li>
         </ul>
       </nav>
-      <div>
-        <h1>猿题库®2016中国高中排行榜（{{activeProvince}}10强）</h1>
-        <div class='shadow'></div>
-        <v-table class="fixhead province" :columns='columns_province'
+      <div class="fixed">
+        <h1>猿题库®2017中国高中排行榜（{{activeProvince}}10强）</h1>
+        <div class="shadow">
+          <div class='table-box'>
+            <v-table class="province" :columns='columns_province'
         :dataSource='provinceData[activeProvince]'></v-table>
+          </div>
+        </div>
+      </div>
+      <div class="container">
         <v-table class="province" :columns='columns_province'
         :dataSource='provinceData[activeProvince]'></v-table>
       </div>
@@ -41,11 +46,11 @@ export default {
         dataIndex: 'city'
       },
       {
-        name: '15年省内排名',
+        name: '16年省内排名',
         dataIndex: 'lastRank'
       },
       {
-        name: '16年全国排名',
+        name: '17年全国排名',
         dataIndex: 'nationRank'
       }],
       provinceData,
@@ -58,24 +63,20 @@ export default {
     changeProvince (item) {
       this.activeProvince = item
     }
+  },
+  mounted () {
+    $('#app').css('overflow', 'hidden')
+    $('.container').height($(window).height() - $('#mh').height() - $('#ranklist').height() - $('#navscroll').height() - $('.fixed').height())
   }
 }
 </script>
 <style scoped>
-table {margin-top: 125px}
-table.fixhead.province {top:164px;margin:0;}
-.shadow {
-  height: 45px;
-  position: fixed;
-  width: 100%;
-  top: 164px;
-  z-index: 3;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12);
-}
-.tablelist h1 {top:120px;}
+.shadow {height: 45px;}
+.table-box {height: 45px;overflow: hidden;}
+.tablelist h1 {margin-top: 35px;}
 #navscroll {overflow: hidden;height:35px;position: fixed;top:85px;width: 100%;background: #f7f8f9;}
 nav::-webkit-scrollbar {display:none}
-#tab  {white-space: nowrap;list-style-type: none;font-size: 0;padding-bottom: 20px;overflow-x: scroll;overflow-y:hidden;margin: 0 5px;}
+#tab  {white-space: nowrap;list-style-type: none;font-size: 0;padding-bottom: 20px;overflow-x: scroll;overflow-y:hidden;margin: 0 5px;-webkit-overflow-scrolling: touch;}
 #tab li {font-size: 13px;color: #666;line-height: 1;display: inline-block;padding: 11px 10px;}
 #tab .active {color: #a92433;}
 #navscroll:before {

@@ -2,7 +2,7 @@
   <article>
     <section class="tablelist center-box" id="ranklist">
       <section>
-        <v-table title="猿题库®2016中国高中排行榜（状元榜）" :columns="columns"
+        <v-table title="猿题库®2017中国高中排行榜（状元榜）" :columns="columns"
         :dataSource="championData">
       </v-table>
     </section>   
@@ -37,7 +37,7 @@ export default {
         dataIndex: 'nationRank'
       },
       {
-        name: '近6年总数',
+        name: '近7年总数',
         dataIndex: 'total_amount'
       }],
       championData

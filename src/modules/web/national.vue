@@ -2,7 +2,7 @@
   <article>
     <section class="tablelist center-box text-center">
       <div class="shadow"></div>
-      <v-table :title="'猿题库®2016中国高中排行榜（100强）'" :columns="columns_country"
+      <v-table :title="'猿题库®2017中国高中排行榜（100强）'" :columns="columns_country"
       :dataSource="nationData">
       </v-table>      
       </v-table>
@@ -33,7 +33,7 @@ export default {
         dataIndex: 'province'
       },
       {
-        name: '2015年排名',
+        name: '2016年排名',
         dataIndex: 'lastRank'
       },
       {

@@ -2,13 +2,16 @@
   <article>
     <Navbar></Navbar>
     <section class="tablelist center-box text-center" id="champion">
-      <div>
-        <h1>猿题库®2016中国高中排行榜（状元榜）</h1>
-        <div class="shadow"></div>
-        <v-table class="fixhead" :columns="columns"
-        :dataSource="championData"></v-table>
-        <v-table :columns="columns"
-        :dataSource="championData"></v-table>
+      <div class="fixed">
+        <h1>猿题库®2017中国高中排行榜（状元榜）</h1>
+        <div class="shadow">
+          <div class="small-table-box"><v-table class="fixhead" :columns="columns"
+        :dataSource="championData"></v-table></div>
+        </div>
+      </div>
+      <div class="container">
+        <v-table :columns="columns" class="small-thead"
+      :dataSource="championData"></v-table>
       </div>
     </section>
   </article>
@@ -40,11 +43,15 @@ export default {
         dataIndex: 'nationRank'
       },
       {
-        name: '近6年总数',
+        name: '近7年总数',
         dataIndex: 'total_amount'
       }],
       championData
     }
+  },
+  mounted () {
+    $('#app').css('overflow', 'hidden')
+    $('.container').height($(window).height() - $('#mh').height() - $('#ranklist').height() - $('.fixed').height())
   }
 }
 </script>

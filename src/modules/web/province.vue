@@ -3,7 +3,7 @@
     <section class="tablelist center-box" id="ranklist">
       <section class="fc">
         <section class="half" v-for="(value,key) in provinceData">
-          <v-table :title="'猿题库®2016中国高中排行榜（' + key + '10强）'" :columns="columns_province"
+          <v-table :title="'猿题库®2017中国高中排行榜（' + key + '10强）'" :columns="columns_province"
           :dataSource="value">
         </v-table>
       </section>
@@ -35,11 +35,11 @@ export default {
         dataIndex: 'city'
       },
       {
-        name: '2015年省内排名',
+        name: '2016年省内排名',
         dataIndex: 'lastRank'
       },
       {
-        name: '2016年全国排名',
+        name: '2017年全国排名',
         dataIndex: 'nationRank'
       }],
       provinceData

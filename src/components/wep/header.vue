@@ -1,6 +1,6 @@
 <template>
   <header id='mh'>
-    <h1 class='text-center'>猿题库®2016中国高中排行榜</h1>
+    <h1 class='text-center'>猿题库®2017中国高中排行榜</h1>
     <span class='more' @click='changeMenu()' id='more'>
       <span></span>
       <span></span>
@@ -31,7 +31,7 @@ export default {
 }
 </script>
 <style scoped>
-header#mh {height: 40px;background: #a92433;position: fixed;top: 0;width: 100%;z-index:3;}
+header#mh {height: 40px;background: #a92433;width: 100%;z-index:3;}
 header h1 {font-size: 15px;color: #ffffff;line-height: 40px;font-weight: normal;}
 #more {position: absolute;top:13px;left:15px; width:16px;height:16px;}
 #more span {height: 1px;display: block;background: #fff;}
