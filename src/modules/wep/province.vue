@@ -75,7 +75,7 @@ export default {
 .table-box {height: 45px;overflow: hidden;}
 .tablelist h1 {margin-top: 35px;}
 #navscroll {overflow: hidden;height:35px;position: fixed;top:85px;width: 100%;background: #f7f8f9;}
-nav::-webkit-scrollbar {display:none}
+::-webkit-scrollbar {display:none}
 #tab  {white-space: nowrap;list-style-type: none;font-size: 0;padding-bottom: 20px;overflow-x: scroll;overflow-y:hidden;margin: 0 5px;-webkit-overflow-scrolling: touch;}
 #tab li {font-size: 13px;color: #666;line-height: 1;display: inline-block;padding: 11px 10px;}
 #tab .active {color: #a92433;}
