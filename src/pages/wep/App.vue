@@ -51,6 +51,7 @@ ul {list-style-type: none;padding: 0}
 .pull-right {float: right;}
 .pull-left {float: left;}
 h1 {font-weight: normal;}
+::-webkit-scrollbar {display:none}
 .container {overflow: scroll;-webkit-overflow-scrolling: touch;}
 .tablelist h1 {font-size: 14px;color: #222222;padding:15px 0 15px;width: 100%;background: #fff}
 table {margin: 0px auto 75px;min-width:320px;border-collapse: collapse;}
